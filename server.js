@@ -9,7 +9,7 @@ const app = express();
 (async function connectDB() {
   try {
     await mongoose.connect(
-      "mongodb+srv://hariprasathys:22Sep2002.@project.w31hjim.mongodb.net/project1",
+      process.env.MONGO_URI,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
